@@ -1,0 +1,19 @@
+// Эффект пульсации
+.e-wave {
+  position: absolute;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  background-clip: padding-box;
+  pointer-events: none;
+  user-select: none;
+  transform: scale(0);
+  opacity: 1;
+  perspective: 1000;
+  backface-visibility: hidden;
+  
+  &.z-active {
+    opacity: 0;
+    transform: scale(3);
+    transition: opacity 1.2s ease-out, transform 0.5s ease-out;
+  }
+}
