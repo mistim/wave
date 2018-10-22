@@ -1,0 +1,19 @@
+{
+  "name": "wave",
+  "version": "1.0.0",
+  "description": "Эффект волны при клике описаный в Material Design.",
+  "main": "dist/js/wave.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mistim/wave.git"
+  },
+  "author": "Mistim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mistim/wave/issues"
+  },
+  "homepage": "https://github.com/mistim/wave#readme"
+}
