@@ -21,7 +21,9 @@ export default function(event, arg_opts) {
 
     if(target) {
         let rect = target.getBoundingClientRect(),
-            wave = target.querySelector('.e-wave');
+            wave = target.querySelector('.e-wave'),
+            top = 0,
+            left = 0;
 
         if (!wave) {
             wave = document.createElement('span');
@@ -34,14 +36,16 @@ export default function(event, arg_opts) {
 
         switch (opts.type) {
             case 'center':
-                wave.style.top = (rect.height / 2 - wave.offsetHeight / 2 ) + 'px';
-                wave.style.left = (rect.width / 2 - wave.offsetWidth / 2) + 'px';
+                top = rect.height / 2;
+                left = rect.width / 2;
                 break;
             default:
-                wave.style.top = ((event.pageY || event.targetTouches[0].pageY) - rect.top - wave.offsetHeight / 2 - document.body.scrollTop) + 'px';
-                wave.style.left = ((event.pageX || event.targetTouches[0].pageX) - rect.left - wave.offsetWidth / 2 - document.body.scrollLeft) + 'px';
+                top = event.layerY;
+                left = event.layerX;
         }
 
+        wave.style.top = (top - wave.offsetHeight / 2 ) + 'px';
+        wave.style.left = (left - wave.offsetWidth / 2) + 'px';
         wave.style.backgroundColor = opts.bgc;
         wave.className = 'e-wave z-active';
 
