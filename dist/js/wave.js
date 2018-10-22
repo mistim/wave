@@ -1,4 +1,4 @@
-import './sass/wave.scss';
+import '../sass/wave.scss';
 
 /**
  * Эффект пульсации кнопки
