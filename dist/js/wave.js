@@ -13,7 +13,7 @@ class Wave {
     this.opts = Object.assign(this.defaultOpts, opts);
 
     this.checkColor();
-    this.checkColor();
+    this.checkType();
   }
 
   init() {
