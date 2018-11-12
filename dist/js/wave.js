@@ -11,6 +11,7 @@ class Wave {
       bgc: 'rgba(0, 0, 0, 0.15)' // Цвет пульсации
     };
     this.opts = Object.assign(this.defaultOpts, opts);
+    this.event;
 
     this.checkColor();
     this.checkType();
@@ -41,8 +42,8 @@ class Wave {
           break;
 
         default:
-          top = event.layerY;
-          left = event.layerX;
+          top = this.event.layerY;
+          left = this.event.layerX;
       }
 
       wave.style.top = (top - wave.offsetHeight / 2 ) + 'px';
