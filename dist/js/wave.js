@@ -11,7 +11,7 @@ class Wave {
       bgc: 'rgba(0, 0, 0, 0.15)' // Цвет пульсации
     };
     this.opts = Object.assign(this.defaultOpts, opts);
-    this.event;
+    this.event = event;
 
     this.checkColor();
     this.checkType();
